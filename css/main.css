@@ -19,18 +19,18 @@ font-family: 'Poppins', sans-serif;
 	--header-text: var(--white);
 	--accent: var(--purple);
 
-	--page-bg:var(--white);
+	--page-bg: var(--white);
 	--text-color: var(--black);
 	--project-card-bg: var(--black);
 	--project-card-text: var(--white);
-	--box-shadow:0px 5px 35px rgba(0, 0, 0, 0.8);
-	--title-1:var(--accent);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+	--title-1: var(--accent);
 }
 
-.dark{
-	--page-bg:#252526;
-	--text-color:var(--white);
-	--title-1:var(--white);
+.dark {
+	--page-bg: #252526;
+	--text-color: var(--white);
+	--title-1: var(--white);
 }
 
 html,
@@ -41,7 +41,7 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	background-color:var(--page-bg);
+	background-color: var(--page-bg);
 	color: var(--text-color);
 }
 
@@ -217,54 +217,60 @@ body {
 
 
 /* ------------------- begin outline------------------- */
-.btn{
+.btn {
 	color: #5C62EC;
 	text-decoration: none;
 	border: 3px solid #5C62EC;
 	border-radius: 54px;
 	font-family: Helvetica;
 	font-weight: 600;
-	font-size:20px;
+	font-size: 20px;
 	line-height: 40px;
 	letter-spacing: 2px;
-    padding: 9px 37px;
+	padding: 9px 37px;
 	position: absolute;
-    left: 50%;
-	transform: translate(-50%,-50%);
+	left: 50%;
+	transform: translate(-50%, -50%);
 
 	overflow: hidden;
 	transition: all 0.3s;
 
 }
 
-.btn:before{
+.btn:before {
 	content: "";
 	position: absolute;
 	width: 338px;
-    height: 347px;
-    border-radius: 142px;
+	height: 347px;
+	border-radius: 142px;
 	background-color: #5C62EC;
 
 	top: 51px;
-    left: 46%;
+	left: 46%;
 	transform: translateX(-50%);
 
 	animation: wave 5s infinite linear;
 	transition: all 1s;
 }
-@keyframes wave{
-	0%{transform: translateX(-50%) rotate(0deg);
 
-	} 
-	100%{transform: translateX(-50%) rotate(360deg);
+@keyframes wave {
+	0% {
+		transform: translateX(-50%) rotate(0deg);
+
+	}
+
+	100% {
+		transform: translateX(-50%) rotate(360deg);
 
 	}
 }
-.btn:hover{
+
+.btn:hover {
 	color: #5156ef;
 	/*transition: all 0.3s;*/
 }
-.btn:hover:before{
+
+.btn:hover:before {
 	top: 25px;
 	/*transition: all 1s;*/
 }
@@ -502,37 +508,75 @@ body {
 	}
 }
 
-@media (max-width:620px){
+@media (max-width:600px) {
 
-.btn {
-    color: #5C62EC;
-    text-decoration: none;
-    border: 3px solid #5C62EC;
-    border-radius: 54px;
-    font-family: Helvetica;
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 33px;
-    letter-spacing: 2px;
-    padding: 2px 4px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    overflow: hidden;
-    transition: all 0.3s;
+	.btn {
+
+		color: #5C62EC;
+		text-decoration: none;
+		border: 3px solid #5C62EC;
+		border-radius: 54px;
+		font-family: Helvetica;
+		font-weight: 600;
+		font-size: 17px;
+		line-height: 23px;
+		letter-spacing: 2px;
+		padding: 16px 4px;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		overflow: hidden;
+		transition: all 0.3s;
+
+	}
+
+	.btn:before {
+		content: "";
+		position: absolute;
+		width: 338px;
+		height: 347px;
+		border-radius: 142px;
+		background-color: #5C62EC;
+		top: 20px;
+		left: 46%;
+		transform: translateX(-50%);
+		animation: wave 5s infinite linear;
+		transition: all 1s;
+	}
 }
-.btn:before {
-    content: "";
-    position: absolute;
-    width: 338px;
-    height: 347px;
-    border-radius: 142px;
-    background-color: #5C62EC;
-    top: 20px;
-    left: 46%;
-    transform: translateX(-50%);
-    animation: wave 5s infinite linear;
-    transition: all 1s;
+
+@media (max-width:400px) {
+	.btn {
+		color: #5C62EC;
+		text-decoration: none;
+		border: 3px solid #5C62EC;
+		border-radius: 54px;
+		font-family: Helvetica;
+		font-weight: 600;
+		font-size: 17px;
+		line-height: 23px;
+		letter-spacing: 2px;
+		padding: 12px 5px;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		overflow: hidden;
+		transition: all 0.3s;
+	}
+
+	.btn:before {
+		content: "";
+		position: absolute;
+		width: 338px;
+		height: 347px;
+		border-radius: 132px;
+		background-color: #5C62EC;
+		top: 40px;
+		left: 46%;
+		transform: translateX(-50%);
+		animation: wave 5s infinite linear;
+		transition: all 1s;
+	}
 }
-}
+
 /* ------------------- End Media------------------- */
