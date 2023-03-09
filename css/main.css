@@ -153,13 +153,8 @@ body {
 	z-index: 9;
 }
 
-
-
-
 /* ------------------- end Dark mode btn------------------- */
 
-
-/* ------------------- end Nav------------------- */
 
 
 
@@ -206,35 +201,14 @@ body {
 .header__text {
 	font-size: 18px;
 	line-height: 1.333;
-	margin-bottom: 40px;
+	margin-bottom: 60px;
 }
 
 .header__text p+p {
 	margin-top: 1em;
 }
 
-.btn {
 
-	display: inline-block;
-	height: 48px;
-	padding: 12px 28px;
-	border-radius: 5px;
-	background-color: var(--accent);
-	color: var(--white);
-	letter-spacing: 0.15px;
-	font-size: 16px;
-	font-weight: 500;
-	transition: opacity 0.2s ease-in;
-}
-
-.btn:hover {
-	opacity: 0.8;
-}
-
-.btn:active {
-	position: relative;
-	top: 1px;
-}
 
 /* ------------------- End Header------------------- */
 
@@ -243,27 +217,59 @@ body {
 
 
 /* ------------------- begin outline------------------- */
+.btn{
+	color: #5C62EC;
+	text-decoration: none;
+	border: 3px solid #5C62EC;
+	border-radius: 54px;
+	font-family: Helvetica;
+	font-weight: 600;
+	font-size:20px;
+	line-height: 40px;
+	letter-spacing: 2px;
+    padding: 9px 37px;
+	position: absolute;
+    left: 50%;
+	transform: translate(-50%,-50%);
 
-.btn-outline {
-	height: 48px;
-	padding: 12px 20px;
-	border-radius: 5px;
-	background-color:var(--white) ;
-	border: 1px solid var(--blackpure);
-	color: var(--blackpure);
-	display: flex;
-	column-gap: 10px;
-	align-items: center;
+	overflow: hidden;
+	transition: all 0.3s;
+
 }
 
-.btn-outline:hover {
-	opacity: 0.8;
+.btn:before{
+	content: "";
+	position: absolute;
+	width: 338px;
+    height: 347px;
+    border-radius: 142px;
+	background-color: #5C62EC;
+
+	top: 51px;
+    left: 46%;
+	transform: translateX(-50%);
+
+	animation: wave 5s infinite linear;
+	transition: all 1s;
+}
+@keyframes wave{
+	0%{transform: translateX(-50%) rotate(0deg);
+
+	} 
+	100%{transform: translateX(-50%) rotate(360deg);
+
+	}
+}
+.btn:hover{
+	color: #5156ef;
+	/*transition: all 0.3s;*/
+}
+.btn:hover:before{
+	top: 25px;
+	/*transition: all 1s;*/
 }
 
-.btn-outline:active {
-	position: relative;
-	top: 1px;
-}
+
 
 /* ------------------- End outline------------------- */
 
